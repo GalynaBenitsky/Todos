@@ -25,10 +25,11 @@ export class Todoitem extends Component {
         const { id, title } = this.props.todo;
         return (
             <div style={this.getStyle()} >
+
                 <p>
                     <input type="checkbox" onChange={this.props.toggleComplete.bind(this, id)} /> {' '}
                     {title}
-                    <button onClick={this.props.deleteTodo.bind(this, id)} style={btnStyle}>x</button>
+                    <button onClick={this.props.deleteTodo.bind(this, id)} style={btnStyle}><i class="fa fa-trash"></i></button>
 
                 </p>
 

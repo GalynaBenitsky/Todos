@@ -1,24 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { nodeName } from 'jquery';
+
 
 function Header() {
     return (
-        <header style={headerStyle}>
-            <h1>Todo List</h1>
-            <Link style={linkStyle} to="/">Home</Link> | <Link style={linkStyle}
-                to="/about">About</Link>
-        </header>
+        <div className="card-header-tab card-header bg-dark text-white mt-3">
+            <div className="card-header-title font-size-lg text-capitalize font-weight-normal"><h3><i className="fa fa-tasks"></i>&nbsp;Todo List</h3></div>
+            <header style={headerStyle}>
+
+                <Link style={linkStyle} to="/">Home</Link> | <Link style={linkStyle}
+                    to="/about">About</Link>
+            </header>
+        </div>
+
     )
 }
 const headerStyle = {
-    background: '#333',
-    color: '#fff',
-    textAlign: 'center',
-    padding: '10px'
+    //background: '#333',
+    // color: '#fff',
+    // textAlign: 'center',
+    // padding: '10px'
 }
 const linkStyle = {
     color: '#fff',
-    textDecoration: 'none'
+    // textDecoration: 'none'
 }
 export default Header;
